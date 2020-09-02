@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM API Javascript</title>
+</head>
+
+<body>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+
+    <script>
+       var paragraf = document.getElementsByClassName("paragraf");
+          console.log(paragraf);
+       
+       var randomColor1 = Math.floor(Math.random()*16777215).toString(16);
+       var randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+       var randomColor3 = Math.floor(Math.random()*16777215).toString(16);
+       var paragraf = document.getElementsByClassName("paragraf");
+        setInterval(function () {
+        paragraf[0].style.color = "#"+randomColor1;
+        paragraf[1].style.color = "#"+randomColor2;
+        paragraf[2].style.color = "#"+randomColor3;
+
+        setTimeout(function () {
+        paragraf[0].style.color = "#"+randomColor2;
+        paragraf[1].style.color = "#"+randomColor3;
+        paragraf[2].style.color = "#"+randomColor1;
+        }, 500)
+    }, 1000);
+    </script>
+
+</body>
+
+</html>
